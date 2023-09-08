@@ -1,0 +1,448 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+
+body{
+    width:99vw;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: 70px 700px 650px 800px 550px 70px;
+    grid-template-areas:
+    "header" 
+    "section1"
+    "section2"
+    "section3"
+    "section4"
+    "footer";
+}
+
+
+header{
+    grid-area: header;
+    background-color:white;
+    display: flex;
+}
+#mini{
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 30px;
+}
+.nav{
+    width: 100%;
+    position: relative;
+    left: 21%;
+}
+ul{
+    width: 80%;
+    height: 80%;
+    list-style: none;
+    margin: 20px auto;
+}
+li{
+    display: inline-block;
+    margin-right: 20px;
+}
+li:hover{
+    border-bottom: 1px solid rgba(0, 172, 193, 1);
+    opacity: 0.7;
+    color:rgba(0, 172, 193, 1);
+}
+li a{
+    width: 20%;
+    height: 20%;
+    padding: 30px 20px;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+
+
+
+#section1{
+    grid-area: section1;
+    margin: 0;
+}
+h1{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 60px;
+}
+  
+p{
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #333333;
+}
+  
+.header{
+    position: relative;
+    text-align: center;
+    background: linear-gradient(
+      60deg,
+      rgba(84, 58, 183, 1) 0%,
+      rgba(0, 172, 193, 1) 100%
+    );
+    color: white;
+}
+  
+.logo{
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+  
+.inner-header{
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+   
+.flex{
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.waves{
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+  
+.content{
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+/* Animation */
+.parallax > use{
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1){
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+  
+.parallax > use:nth-child(2){
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3){
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+  
+.parallax > use:nth-child(4){
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+  
+@keyframes move-forever{
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+}
+/* /* Shrinking for mobile */
+
+@media (max-width: 768px) {
+    .waves {
+      height: 40px;
+      min-height: 40px;
+    }
+    .content {
+      height: 30vh;
+    }
+    h1 {
+      font-size: 24px;
+    }
+}
+
+
+   
+#section2{
+    grid-area: section2;
+    margin: 10px;
+    background-image: url(images/world-1302935.jpg);
+    background-size: cover;
+}
+.Sec2_Grid{
+    width: 50%;
+    height: 60%;
+    margin-top: 10px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-row: 25% 75%;
+    grid-template-areas: 
+    "div1 div2"
+    "div3 div3";
+}
+.div1{
+    grid-area: div1;
+}
+.div1 p{
+    color: black;
+    font-size: 80px;
+    font-weight: bolder;
+    text-align: right;
+    padding-right:60px;
+}
+.div2{
+    grid-area: div2;
+}
+.div2 p{
+    color: black;
+    font-size: 80px;
+    font-weight: 1000;
+    text-align: left;
+}
+.div3{
+    grid-area: div3;
+}
+.div3 p{
+    color: black;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+
+#section3{
+    grid-area: section3;
+    margin: 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#section3 .container {
+    width: 50%;
+    height: 80%;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1.5px solid rgba(0, 172, 193, 1);
+}
+.image-container{
+    height: 40%;
+    width: 90%;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.project-details {
+    margin-top: 20px;
+    height: 60%;
+}
+.project-details h2 {
+    font-size: 24px;
+    margin: 0;
+    height: 20%;
+    text-decoration: underline rgba(0, 172, 193, 1);
+}
+.project-details p {
+    font-size: 16px;
+    margin: 10px 0;
+    height: 70%;
+}
+.arrow-buttons button {
+    background-color:  #005bbf; /* Base blue color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.arrow-buttons button:hover {
+    background-color:rgba(0, 172, 193, 1);
+}
+
+
+
+
+
+#section4{
+    grid-area: section4;
+    margin: 10px;
+
+}
+.container2{
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid  rgba(0, 172, 193, 1);
+    text-align: center;
+}
+label{
+    font-weight: bold;
+}
+input[type="text"], input[type="file"] {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid  rgba(0, 172, 193, 1);
+}
+button{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+footer{
+    grid-area:footer;
+}
+footer p{
+    font-size: large;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Media Query for Smaller Screens (e.g., Tablets) */
+@media (max-width: 1023px) {
+    body {
+        grid-template-rows: 70px 800px 800px 750px 800px 70px;
+    }
+
+    /*section3*/
+    .div3 p{
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        padding-right: 35px;
+        position: relative;
+        bottom: 30px;
+        overflow: auto;
+    }
+
+
+}
+
+/* Media Query for Even Smaller Screens (e.g., Mobile) */
+@media (max-width: 767px) {
+    body {
+        grid-template-rows: 70px 800px 950px 650px 500px 70px;
+    }
+    /*header*/
+    #mini{
+        font-size: 15px;
+        font-weight: 100;
+        padding-top: 30px;
+    }
+    .nav{
+        width: 100%;
+        position: relative;
+        left: 0px;
+    }
+    ul{
+        width: 100%;
+        height: 80%;
+    }
+    li{
+        display: inline-block;
+    }
+    li a{
+        width: 10%;
+        height: 10%;
+        padding: 7px 0px;
+    }
+
+    /*section1*/
+    #subP p{
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    /*section2*/
+    .Sec2_Grid{
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+    }
+    .div1 p{
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: right;
+        padding-right:60px;
+    }
+    .div2 p{
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: left;
+        position: relative;
+        right: 30px;
+    }
+    .div3 p{
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        padding-right: 35px;
+        position: relative;
+        bottom: 30px;
+        overflow: auto;
+    }
+
+    /*section3*/
+    #section3 .container {
+        width: 80%;
+        height: 90%;
+        padding: 20px;
+        background-color: #ffffff; 
+        border-radius: 10px; 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1.5px solid rgba(0, 172, 193, 1);
+    }
+    .project-details p {
+        font-size: 16px;
+        margin: 10px 0;
+        height: 70%;
+        overflow: auto;
+    }
+
+}
+
